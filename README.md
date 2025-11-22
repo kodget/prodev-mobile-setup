@@ -199,6 +199,17 @@ export default function RootLayout() {
 
 6. **Self-Documenting:** The starter app itself includes instructions about the reset command in the UI (see `app/(tabs)/index.tsx` line 74-84).
 
+7. **Intentionally Excluded from Git:** The `/app-example` directory is listed in `.gitignore` (line 39), meaning:
+   - ✅ It **exists locally** on your machine for reference
+   - ❌ It's **NOT tracked by git** and won't appear on GitHub
+   - 💡 This is **by design** - it's meant as temporary local reference only
+   - 🗑️ You should delete it when you're done referencing the example code
+
+### Important Note About Version Control
+
+> [!IMPORTANT]
+> The `app-example` directory exists on your local machine but will **NOT** be pushed to GitHub because it's excluded in `.gitignore`. This is intentional - the Expo team designed it as a local-only reference that you should delete once you're comfortable with your own implementation.
+
 ### When to Use It
 
 Use `npm run reset-project` when:
@@ -224,6 +235,7 @@ Current state:
 
 - ✅ `/app-example/app` contains the original starter template (moved during reset)
   - Includes `(tabs)/index.tsx`, `(tabs)/explore.tsx`, `_layout.tsx`, `modal.tsx`
+  - **Note:** This directory exists **locally only** - it's excluded from git via `.gitignore`
 - ✅ `/app` directory has been restored with the full starter template
   - Tab-based navigation with Home and Explore screens
   - All original example files are back
@@ -233,9 +245,12 @@ Current state:
 **What this means:**
 
 - You have both the original starter code (in `/app-example/app`) AND the current working version (in `/app`)
-- The `/app-example` serves as a backup of the original template
+- The `/app-example` serves as a backup of the original template **on your local machine only**
 - You can run `npm run reset-project` again if you want a truly fresh start
 - Or continue building on the current `/app` structure
+
+> [!NOTE]
+> If you clone this repository from GitHub, the `/app-example` directory will **NOT** be present because it's gitignored. Only the current `/app` directory will be available.
 
 ## Next Steps
 
@@ -255,7 +270,7 @@ Current state:
 3. **Begin development:**
    - Edit `app/index.tsx` to create your main screen
    - Add new routes by creating files in the `/app` directory
-   - Reference `/app-example` for component examples
+   - Reference `/app-example` for component examples (local only)
 
 ## Additional Resources
 
