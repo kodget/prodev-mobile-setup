@@ -218,16 +218,24 @@ Don't use `npm run reset-project` if:
 
 ## Current Project Status
 
-**Status:** The `reset-project` command has **NOT** been run yet.
+**Status:** The `reset-project` command **WAS run previously**, but the starter template has been **restored**.
 
-The project currently contains:
+Current state:
 
-- ✅ Full starter template with example components
-- ✅ Tab-based navigation with Home and Explore screens
-- ✅ Themed components and custom hooks
-- ✅ ParallaxScrollView and animations
-- ✅ Modal example
-- ❌ Empty `/app-example` directory (will be populated after reset)
+- ✅ `/app-example/app` contains the original starter template (moved during reset)
+  - Includes `(tabs)/index.tsx`, `(tabs)/explore.tsx`, `_layout.tsx`, `modal.tsx`
+- ✅ `/app` directory has been restored with the full starter template
+  - Tab-based navigation with Home and Explore screens
+  - All original example files are back
+- ✅ `/components`, `/hooks`, `/constants` directories exist in the root (not in `/app-example`)
+  - This suggests the project was either restored from git or manually reconstructed
+
+**What this means:**
+
+- You have both the original starter code (in `/app-example/app`) AND the current working version (in `/app`)
+- The `/app-example` serves as a backup of the original template
+- You can run `npm run reset-project` again if you want a truly fresh start
+- Or continue building on the current `/app` structure
 
 ## Next Steps
 
